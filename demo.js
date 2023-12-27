@@ -45,3 +45,77 @@ function dominioDelPais(dominio){
 }
 
 dominioDelPais("br");
+//for
+
+function encontrarVocalA (string){
+    for (var i = 0; i < string.length; i++){
+        if(string[i] === "a"){
+            return "Encontramos la vocal a"
+        }
+    }
+     return "El string no tiene ninguna letra a"
+}
+console.log(encontrarVocalA("hola"))
+
+//while
+var contador = 1;
+  while(contador < 6) {
+    console.log( "contador es: ", contador);
+    contador++;
+}
+
+
+// for
+function encontrarVocalA(string){
+    for(var i=0; i < string.length; i++){
+        if(string[i] === "a"){
+            return "Encontramos la vocal a"
+        }
+    }
+     return "El string no tiene ninguna letra a"
+}
+    
+console.log(encontrarVocalA("holo"))
+
+//while
+
+var contador = 1;
+while(contador < 6) {
+    console.log("contador es: "+ contador);
+    contador++;
+}
+// dowhile
+
+ var count = 1;
+ do {
+    console.log("count es: " + count);
+    count++;
+ }
+ while(count < 6)
+
+ //switch
+function diaSemana(dia) {
+    switch (dia) {
+        case "Lunes":
+            console.log("Hoy es lunes");
+            break;
+        case "Martes":
+            console.log("Hoy es Martes");
+            break;
+        case "Miercoles":
+            console.log("Hoy es Miercoles");
+            break;
+        case "Jueves":
+            console.log("Hoy es Jueves");
+            break;
+        case "Viernes":
+            console.log("Hoy es Viernes");
+            break;
+        default:
+            console.log("El dia no es valido");
+    }
+}
+
+ diaSemana("Miercoles")
+
+ 
