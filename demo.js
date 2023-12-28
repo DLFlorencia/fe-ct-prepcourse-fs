@@ -118,4 +118,45 @@ function diaSemana(dia) {
 
  diaSemana("Miercoles")
 
- 
+ var comidas = ["Pizza", "Hamburguesa", "Pastas", "Lasagna"];
+ comidas.push("Sandwich", "Empanadas");
+ console.log(comidas);
+
+ var comidas = ["Pizza", "Hamburguesa", "Pastas", "Lasagna"];
+ comidas.pop();
+ console.log(comidas);
+
+var comidas = ["Pizza", "Hamburguesa", "Pastas", "Lasagna"];
+comidas.unshift("Hot dog")
+console.log(comidas);
+
+var comidas = ["Hot dog", "Pizza", "Hamburguesa", "Pastas", "Lasagna"];
+comidas.shift();
+console.log(comidas);
+
+var autos = ["Ford", "Chevrolet", "Toyota", "Tesla"];
+function mostrarNombres(elemento) {
+    console.log(elemento);
+}
+autos.forEach(mostrarNombres);
+
+var numeros = [2, 3, 4, 5];
+function multiplicar(elemento) {
+    return elemento * 3;
+}
+var triple = numeros.map(multiplicar)
+console.log(triple)
+
+var numeros = [1,2,3,4,5,6,7,8,9];
+function sumatoria (acc, elemento) {
+    return acc + elemento;
+}
+var suma = numeros.reduce(sumatoria)
+    
+
+console.log(suma);
+
+function saludo(nombre,apellido) {
+    console.log(arguments[0])
+}
+saludo("Auri", "Sandoval")
