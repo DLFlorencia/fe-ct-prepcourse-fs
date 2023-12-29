@@ -160,3 +160,66 @@ function saludo(nombre,apellido) {
     console.log(arguments[0])
 }
 saludo("Auri", "Sandoval")
+
+// Objetos
+
+var usuario = {
+    nombre: "Alejo",
+    password: "hola123",
+    edad: 26,
+    online: true,
+    amigos: ["Maria", "Jose", "Luis"]
+};
+console.log(usuario);
+
+// dot notation
+console.log(usuario.nombre);
+
+console.log(usuario.edad);
+
+// bracket notation
+console.log(usuario["amigos"]);
+console.log(usuario["online"]);
+
+//asignar y modificar
+
+usuario.pais = "Colombia";
+usuario["identificacion"] = 41276073;
+usuario["telefono"] = 4250340;
+
+usuario.pais = "Argentina";
+usuario["pais"] = "Uruguay";
+
+var profesion = "Developer";
+
+usuario.profesion = profesion;
+usuario["profesion"] = profesion;
+
+// eliminar propiedad
+delete usuario["profesion"];
+
+usuario.decirHola = function(name) {
+    return "Hola!" + name;
+}
+console.log(usuario.decirHola("Lucas"));
+
+//hasOwnProperty
+
+console.log(usuario.hasOwnProperty("pais"));
+
+console.log(Object.values(usuario));
+
+console.log(usuario.amigos.length);
+
+//bucle for...in
+
+for(var clave in usuario){
+    console.log(usuario[clave]);
+}
+
+// this
+
+usuario.decirHola = function() {
+    return "Hola!" + this.nombre + "tienes " + this.edad;
+}
+console.log(usuario.decirHola());
