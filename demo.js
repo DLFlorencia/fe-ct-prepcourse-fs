@@ -223,3 +223,60 @@ usuario.decirHola = function() {
     return "Hola!" + this.nombre + "tienes " + this.edad;
 }
 console.log(usuario.decirHola());
+
+// CLASES
+
+// function Gato(nombre, edad, dueno, color) {
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.dueno = dueno;
+//     this.color = color;
+//     this.maullar = function() {
+//         return "Mi nombre es " + this.nombre + "...Meow!"
+//     }
+// }
+// // prototype
+// Gato.prototype.decirEdad = function(){
+//     return this.edad;
+// }
+// Gato.prototype.color = function(color){
+//     this.color = color;
+// }
+// console.log(gato1.color("negro"));
+// console.log(gato1);
+
+// // var gato1 = new Gato("michi", 10, "Alejo");
+// // console.log(gato1.decirEdad());
+
+// // var gato2 = new Gato("canela", 3);
+
+// console.log(gato1);
+// console.log(gato2); 
+
+// console.log(gato1.maullar());
+
+//HERENCIA
+class Animal {
+    constructor(nombre, raza, filum) {
+        this.nombre = nombre;
+        this. raza = raza;
+        this.filum = filum;
+        this.ladrar = function (){
+            console.log("guau!");
+        }
+    }
+}
+
+class Perro extends Animal {
+    constructor(nombre, raza, color) {
+        super (nombre);
+        this.color = color;
+        this.raza = raza;
+    }
+}
+
+var perrito1 = new Perro("Firulais", "Dalmata", "blanco")
+console.log(perrito1); 
+
+perrito1.ladrar();
+// var animal1 = this.Animal("firulais");
